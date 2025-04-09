@@ -7,6 +7,8 @@ export default async function mealPage({ params }) {
   const { mealSlug } = await params;
   const meal = getMeal(mealSlug);
 
+  console.log({ meal, mealSlug });
+
   if (!meal) {
     notFound();
   }
